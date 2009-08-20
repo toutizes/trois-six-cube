@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>36 Cube</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/tsc.css" />
+</head>
+    
+<body>
+<div id="myheader">
+ <table width="800"><tbody><tr>
+ <td width="10%"><b>36 Cube</b></td>
+ <td width="10%">Jouer</td>
+ <td width="10%"><a href="score">Scores</a></td>
+ <td align="right" width="20%">
+    {{ user_name }} <a href="{{ login_url }}">{{ login_url_linktext }}</a>
+ </td>
+ </tr></tbody></table>
+</div>
+
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="800" height="680">
+  <param name="movie" value="swf/threesixcube.swf" />
+  <!--[if !IE]>-->
+  <object type="application/x-shockwave-flash" data="swf/threesixcube.swf" width="800" height="680">
+  <!--<![endif]-->
+    <param name="flashvars" value="username={{user_name}}&state=0012" />
+  <!--[if !IE]>-->
+  </object>
+  <!--<![endif]-->
+</object> 
+
+</body>
+</html>
