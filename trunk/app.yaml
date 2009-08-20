@@ -1,0 +1,24 @@
+application: trois-six-cube
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+# Style sheets are in /css
+- url: /css
+  static_dir: css
+
+# The dynamic contents are created here
+- url: /play/.*
+  script: play.py
+
+# The flash app is here
+- url: /swf
+  static_dir: swf
+  mime_type: application/x-shockwave-flash
+
+# The main pages are served here
+- url: /.*
+  script: pages.py
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>36 Cube</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/tsc.css" />
+</head>
+    
+<body>
+<div id="myheader">
+ <table width="800"><tbody><tr>
+ <td width="10%"><b>36 Cube</b></td>
+ <td width="10%"><a href="game">Jouer</td>
+ <td width="10%">Scores</td>
+ <td align="right" width="20%">
+    {{ user_name }} <a href="{{ login_url }}">{{ login_url_linktext }}</a>
+ </td>
+ </tr></tbody></table>
+</div>
+
+<h4>Les Scores</h4>
+
+<p>
+
+<table width=100%><tbody>
+<tr><th width="20%" align="left">Nom</th><th width="80%" align="left">Score</th></tr>
+{% for status in statuses %}
+<tr id="{{ status.style }}">
+ <td>{{ status.name }}</td><td>{{ status.score }}</td>
+</tr>
+{% endfor %}
+</tbody></table>
+
+</body>
+</html>
